@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 
 namespace ReviewTask
 {
@@ -43,6 +45,42 @@ namespace ReviewTask
             {
                 Console.WriteLine("Invalid year");
             }
+
+            int start = 1;
+             int end = 100;
+             PrintNumbers(start, end);
         }
+
+        //Task 2 print 1 to 100 without loop
+        public static void PrintNum()
+        {
+            int num = 1;
+            if (num < 100)
+            {
+                int res=Increament(num);
+                num=res;
+            }
+            Console.WriteLine(num);
+        }
+        public static int Increament(int num)
+        {
+            return num+1;
+        }
+
+        public static void PrintNumbers(int start, int end)
+        {
+            Console.WriteLine(start);
+            if (start < end)
+            {
+                PrintNumbers(start + 1, end);
+            }
+        }
+
+        //public static void Main(string[] args)
+        //{
+        //    int start = 1;
+        //    int end = 100;
+        //    PrintNumbers(start, end);
+        //}
     }
 }
